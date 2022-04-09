@@ -1,0 +1,41 @@
+<div class="row">
+   {{> admin/sidebar}}
+   <div class="col s9 ">
+      <h3 class="mb-3 col-12 float-center">Создать новый пость</h3>
+      {{#if postError}}
+         <p class="alert mb-2">{{postError}}</p>
+      {{/if}}
+      <form action="/admin/post" method="post" enctype="multipart/form-data">
+         <div class="input-field col s9 offset-s1">
+            <input id="title" type="text" name="title">
+            <label for="title">Title</label>
+         </div>
+         <div class="input-field col s9 offset-s1">
+            <textarea id="textarea1" class="materialize-textarea" name="text"></textarea>
+            <label for="textarea1">Text</label>
+         </div>
+         <div class="file-field input-field col s9 offset-s1">
+            <div class="btn">
+               <span>Изображение</span>
+               <input type="file" name="preview">
+            </div>
+            <div class="file-path-wrapper">
+               <input class="file-path validate" type="text">
+            </div>
+         </div>
+         <div class="input-field col s9 offset-s1">
+            <select name="categoryId">
+               <option value="" disabled selected>Категегории</option>
+               {{#each categories}}
+                  <option value="{{_id}}">{{title}}</option>
+               {{/each}}
+            </select>
+            <label>Категегории</label>
+         </div>
+         <input type="hidden" name="_csrf" value="{{csrf}}">
+         <div class="input-field col s9 offset-s1">
+            <button class="btn btn-primary" type="submit">Создать</button>
+         </div>
+      </form>
+   </div>
+</div>

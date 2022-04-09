@@ -1,0 +1,29 @@
+<div class="row">
+   {{> admin/sidebar}}
+   <div class="col s9 mt-1">
+      <a class="btn btn-primary mb-2" href="/admin/category/create">
+         Добавить Категории
+      </a>
+      {{#if categories.length}}
+         <table class="striped categories">
+            <thead>
+               <tr>
+                  <th>Title</th>
+                  <th rowspan="2" class="float-center">action</th>
+               </tr>
+            </thead>
+            <tbody>
+               {{#each categories}}
+                  <tr>
+                     <td>{{title}}</td>
+                     <td><a href="/admin/category/{{_id}}/edit"><i class="small material-icons">create</i></a></td>
+                     <td><i class="delete-category small material-icons" data-id="{{_id}}" data-csrf="{{@root.csrf}}">delete</i></td>
+                  </tr>
+               {{/each}}
+            </tbody>
+         </table>
+      {{else}}
+         <p>Нет категории</p>
+      {{/if}}
+   </div>
+</div>

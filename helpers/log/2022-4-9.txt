@@ -1,0 +1,11 @@
+Apr-09-2022 06:52:16 : error : post.save is not a function !!!
+Apr-09-2022 06:53:16 : error : post.save is not a function !!!
+Apr-09-2022 06:53:34 : error : Converting circular structure to JSON
+    --> starting at object with constructor 'Topology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle !!!
+Apr-09-2022 06:54:44 : error : Cannot convert undefined or null to object !!!
+Apr-09-2022 07:03:27 : error : ENOENT: no such file or directory, access 'images/preview/5a61564e-16b4-4744-bf59-b0f00c59d5a7300px-Atlantis_28129.jpg' !!!
+Apr-09-2022 07:11:55 : error : post.categoryId._doc is not a function !!!
+Apr-09-2022 07:11:57 : error : post.categoryId._doc is not a function !!!

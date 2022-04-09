@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
+.nav-wrapper {
+    padding: 0 3rem;
+}
+
+.auth {
+    padding-top: 2rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+
+.alert {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 1rem;
+    background: rgba(255, 0, 0, 0.3);
+    color: red;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.message {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 1rem;
+    background: rgba(0, 0, 255, 0.3);
+    color: blue;
+}
+
+.sidebar {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #b39ddb;
+    border-radius: 5px;
+}
+
+.sidebar a {
+    width: inherit;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    border-bottom: 1px solid blue;
+    padding-left: 30px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.sidebar a.active {
+    background: #9c27b0;
+}
+
+.info {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* padding: 0 2rem; */
+}
+
+.info .info-block {
+    height: inherit;
+    width: 30%;
+    background: #ce93d8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 40px;
+}
+
+.float-center {
+    text-align: center;
+}
+
+.posts {
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+.posts .post {
+    width: inherit;
+    height: 100px;
+    float: left;
+    border-bottom: 1px solid silver;
+    margin-bottom: 1rem;
+}
+
+.posts .post .preview,
+.post-edit {
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-color: navajowhite;
+}
+
+.posts .post .preview img,
+.post-edit img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.posts .post .title {
+    width: 30%;
+    height: 100px;
+    float: left;
+    margin-left: 2rem;
+}
+
+.posts .post .category {
+    width: 30%;
+    height: 100px;
+    float: left;
+    margin-left: 2rem;
+}
+
+.posts .post .view {
+    width: 3%;
+    height: 100px;
+    float: left;
+    margin-left: 2rem;
+}
+
+.posts .post .edit {
+    width: 3%;
+    height: 100px;
+    float: left;
+    margin-left: 2rem;
+}
+
+.posts .post .delete {
+    width: 3%;
+    height: 100px;
+    float: left;
+    margin-left: 2rem;
+}

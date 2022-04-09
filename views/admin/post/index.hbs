@@ -1,0 +1,37 @@
+<div class="row">
+   {{> admin/sidebar}}
+   <div class="col s9 mt-1">
+      <a class="btn btn-primary" href="/admin/post/create">
+         Добавить посты
+      </a>
+      {{#each posts}}
+         <div class="posts mt-2">
+            <div class="post">
+               <div class="preview">
+                  <img src="/{{preview}}" alt="#">
+               </div>
+               <div class="title">
+                  {{title}}
+               </div>
+               <div class="category">
+                  {{categoryId.title}}
+               </div>
+               <div class="view float-center">
+                  <a href="/"><i class="small material-icons">remove_red_eye</i></a>
+               </div>
+               <div class="edit float-center">
+                  <a href="/admin/post/{{_id}}/edit"><i class="small material-icons">border_color</i></a>
+               </div>
+               <div class="delete float-center">
+                  <form action="/admin/post" method="post" class="form-delete-post">
+                     <input type="hidden" name="_method" value="DELETE">
+                     <input type="hidden" name="_csrf" value="{{@root.csrf}}">
+                     <input type="hidden" name="id" value="{{_id}}">
+                     <button type="button"><i class="delete-post small material-icons">delete</i></button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      {{/each}}
+   </div>
+</div>

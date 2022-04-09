@@ -1,0 +1,58 @@
+<div class="auth">
+   <div class="row">
+      <div class="col s12">
+         <ul class="tabs">
+            <li class="tab col s6"><a class="active" href="#login">Войти</a></li>
+            <li class="tab col s6"><a class="active" href="#register">Регистрация</a></li>
+         </ul>
+      </div>
+      <div id="login" class="col s6 offset-s3">
+         {{#if loginError}}
+            <p class="alert mb-2">{{loginError}}</p>
+         {{/if}}
+         {{#if message}}
+            <p class="message mb-2">{{message}}</p>
+         {{/if}}
+         <h2 class="mb-3">Войти</h2>
+         <form action="/auth/login" method="post">
+            <div class="input-field">
+               <input name="email" id="email" type="email">
+               <label for="email">Email</label>
+            </div>
+            <div class="input-field">
+               <input name="password" id="password" type="password">
+               <label for="password">Парол</label>
+            </div>
+            <input type="hidden" name="_csrf" value="{{csrf}}">
+            <p><a href="/auth/reset">Забыли парол</a></p>
+            <button class="btn btn-primary" type="submit">Войти</button>
+         </form>
+      </div>
+      <div id="register" class="col s6 offset-s3">
+         {{#if registerError}}
+            <p class="alert">{{registerError}}</p>
+         {{/if}}
+         <h2 class="mb-3">Создат аккаунт</h2>
+         <form action="/auth/register" method="post">
+            <div class="input-field">
+               <input name="email" id="remail" type="email">
+               <label for="remail">Email</label>
+            </div>
+            <div class="input-field">
+               <input name="name" id="rename" type="text">
+               <label for="rename">Имя</label>
+            </div>
+            <div class="input-field">
+               <input name="password" id="rpassword" type="password">
+               <label for="rpassword">Парол</label>
+            </div>
+            <div class="input-field">
+               <input name="confirm" id="confirm" type="password">
+               <label for="confirm">Парол еще раз</label>
+            </div>
+            <input type="hidden" name="_csrf" value="{{csrf}}">
+            <button class="btn btn-primary" type="submit">Зарегистрироваться</button>
+         </form>
+      </div>
+   </div>
+</div>

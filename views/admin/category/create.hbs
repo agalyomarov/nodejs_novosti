@@ -1,0 +1,17 @@
+<div class="row">
+   {{> admin/sidebar}}
+   <div class="col s6 offset-s1">
+      <h3 class="mb-3 col-12 float-center">Создать новый категории</h3>
+      {{#if categoryError}}
+         <p class="alert mb-2">{{categoryError}}</p>
+      {{/if}}
+      <form action="/admin/category" method="post">
+         <div class="input-field">
+            <input name="title" id="title" type="text">
+            <label for="title">Title</label>
+         </div>
+         <input type="hidden" name="_csrf" value="{{csrf}}">
+         <button class="btn btn-primary" type="submit">Создать</button>
+      </form>
+   </div>
+</div>

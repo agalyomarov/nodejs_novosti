@@ -1,0 +1,19 @@
+<div class="row">
+   {{> admin/sidebar}}
+   <div class="col s6 offset-s1">
+      <h3 class="mb-3 col-12 float-center">Редактироват категории</h3>
+      {{#if categoryError}}
+         <p class="alert mb-2">{{categoryError}}</p>
+      {{/if}}
+      <form action="/admin/category/edit" method="post">
+         <div class="input-field">
+            <input name="title" id="title" type="text" value="{{category.title}}">
+            <label for="title">Title</label>
+         </div>
+         <input type="hidden" name="_csrf" value="{{csrf}}">
+         <input type="hidden" name="id" value="{{category._id}}">
+         <input type="hidden" name="_method" value="put">
+         <button class="btn btn-primary" type="submit">Редактировать</button>
+      </form>
+   </div>
+</div>

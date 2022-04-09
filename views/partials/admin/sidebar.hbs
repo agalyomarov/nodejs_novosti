@@ -1,0 +1,20 @@
+<div class="col s3">
+   <div class="sidebar mt-1">
+      {{#if isAdminHome}}
+         <a class="active" href="/admin">Главная</a>
+      {{else}}
+         <a href="/admin">Главная</a>
+      {{/if}}
+      {{#if isAdminPost}}
+         <a class="active" href="/admin/post/">Посты</a>
+      {{else}}
+         <a href="/admin/post">Посты</a>
+      {{/if}}
+      <a href="/admin">Ползователи</a>
+      {{#if isAdminCategory}}
+         <a class="active" href="/admin/category/">Категории</a>
+      {{else}}
+         <a href="/admin/category">Категории</a>
+      {{/if}}
+   </div>
+</div>
